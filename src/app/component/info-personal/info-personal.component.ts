@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./info-personal.component.css']
 })
 export class InfoPersonalComponent {
-
+  submit(event: Event){
+    event.preventDefault()
+  }
 }
