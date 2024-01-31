@@ -1,0 +1,39 @@
+.menu{
+    background-image: url('../../../assets/images/bg-sidebar-desktop.svg');
+    background-repeat: no-repeat;
+    padding: 32px;
+    height: 100vh;
+    display: inline-block;
+}
+
+.pasos{
+    display: flex;
+    align-items: center;
+    color: var(--White);
+}
+
+.pasos p{
+    display: flex;
+    flex-direction: column;
+}
+
+.pasos h3{
+    border: 1px solid;
+    width: 32px;
+    height: 32px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+}
+
+.pasos span{
+    color: var(--Cool_gray);
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.pasos p{
+    font-weight: 700;
+}
