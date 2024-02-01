@@ -20,12 +20,12 @@ input::placeholder{
 }
 
 
-
+/* 
 div{
     padding: 1px;
     position: relative;
     height: calc(100% - 16px);
-}
+} */
 
 input[type=submit]{
     padding: 0;

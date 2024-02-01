@@ -1,0 +1,147 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--Marine_blue);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var(--Marine_blue);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+.buttons {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nextStep {
+  cursor: pointer;
+  background-color: var(--Marine_blue);
+  color: var(--White);
+  width: 123px;
+}
+
+.goBack {
+  background-color: var(--White);
+  color: var(--Cool_gray);
+}
+
+button {
+  border: 0px;
+  cursor: pointer;
+  border-radius: 10px;
+  height: 48px;
+
+}
+
+.monthYear{
+    width: 100%;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 23px;
+    font-weight: 500;
+    background-color: var(--Alabaster);
+    border-radius: 10px;
+}
+
+.monthYear .month{
+    color: var(--Marine_blue);
+}
+.monthYear .year{
+    color: var(--Cool_gray);
+}
+
+h1{
+    color: var(--Marine_blue);
+    margin-bottom: 18px;
+    margin-top: 40px;
+}
+
+.containerStep > p{
+    color: var(--Cool_gray);
+    margin-bottom: 40px;
+}
+
+.plans{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 33px;
+}
+
+.plan{
+    width: 138px;
+    height: 160px;
+    border: 1px solid var(--Light_gray);
+    border-radius: 10px;
+    padding: 14px;
+}
+
+.plan h3{
+    font-size: 16px;
+    margin-top: 45px;
+    margin-bottom: 7px;
+    color: var(--Marine_blue);
+}
+
+.plan p{
+    margin: 0;
+    color: var(--Cool_gray);
+    font-size: 14px;
+
+}
+
+.select{
+    background-color: var(--Alabaster);
+    border-color: var(--Purplish_blue);
+}
