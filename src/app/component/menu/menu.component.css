@@ -45,3 +45,9 @@
 .pasos p{
     font-weight: 700;
 }
+
+.activo{
+    color: var(--Marine_blue);
+    background-color: var(--Pastel_blue);
+    border: 1px solid var(--Pastel_blue) !important;
+}

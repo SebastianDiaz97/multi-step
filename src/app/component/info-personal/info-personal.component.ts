@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-info-personal',
@@ -13,15 +13,48 @@ export class InfoPersonalComponent {
   vacioEmail = false
   vacioPhone = false
 
+  @Output() cambiarPaso = new EventEmitter();
+
   submit(event: Event) {
     // event.preventDefault()
-    this.campoFaltante()
+    let validado = this.validarFormualrio()
+    if(validado){
+      this.cambiarPaso.emit(2)
+    }
   }
 
-  campoFaltante() {
-    this.vacioPhone = this.phoneNumber === '' ? true : false;
-    this.vacioName = this.name === '' ? true : false;
-    this.vacioEmail = this.email === '' ? true : false;
+  validarFormualrio() {
+    if (this.name == "") {
+      this.vacioName = true;
+    } else {
+      this.vacioName = false;
+    }
+    let pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (this.email == "") {
+      this.vacioEmail = true;
+    } else if (!pattern.test(this.email)) {
+      alert("Correo electronico no valido");
+      this.vacioEmail = true;
+    } else {
+      this.vacioEmail = false;
+    }
+
+    this.phoneNumber = this.phoneNumber.toString().replace(/[^0-9]/g, '');
+    if (this.phoneNumber.length > 10) {
+      this.vacioPhone = true;
+    } else if (this.phoneNumber.length < 7) {
+      this.vacioPhone = true;
+    } else {
+      this.vacioPhone = false;
+    }
+
+    // console.log(this.vacioName, this.vacioEmail, this.vacioPhone);
+
+    if (!this.vacioName && !this.vacioEmail && !this.vacioPhone) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   change(value: any) {
@@ -36,7 +69,6 @@ export class InfoPersonalComponent {
         break;
       case 'name':
         this.vacioName = this.name === '' ? true : false;
-
         break;
 
       default:

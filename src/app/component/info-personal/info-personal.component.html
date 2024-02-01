@@ -1,8 +1,13 @@
 <div class="containerStep">
   <h1>Personal info</h1>
   <p>Please provide your name, email address, and phone number.</p>
-  <form >
-    <label for="name">Name</label><br />
+  <form>
+    <div class="labels">
+      <label for="name">Name</label>
+      <label class="required" [hidden]="!vacioName">This field is required</label>
+    </div>
+
+    <br />
     <input
       type="text"
       id="name"
@@ -13,7 +18,11 @@
       (keyup)="change($event)"
       required
     /><br />
-    <label for="email">Email Address</label><br />
+    <div class="labels">
+      <label for="email">Email Address</label>
+      <label class="required" [hidden]="!vacioEmail">This field is required</label>
+    </div>
+    <br />
     <input
       [(ngModel)]="email"
       type="email"
@@ -24,10 +33,16 @@
       (keyup)="change($event)"
       required
     /><br />
-    <label for="phone">Phone Number</label><br />
+    <div class="labels">
+      <label for="phone">Phone Number </label>
+      <label class="required" [hidden]="!vacioPhone">This field is required</label>
+    </div>
+    <br />
     <input
       [(ngModel)]="phoneNumber"
-      type="tel"
+      type="number"
+      min="7"
+      max="10"
       id="phone"
       name="phone"
       placeholder="e.g. +1 234 567 890"

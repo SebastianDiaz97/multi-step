@@ -1,7 +1,21 @@
 <div class="container">
-    <app-menu></app-menu>
-    <app-info-personal class="containerSteps"></app-info-personal>
-    <!-- <app-plan class="containerSteps"></app-plan> -->
-    <!-- <app-add-ons class="containerSteps"></app-add-ons> -->
-    <!-- <app-summary class="containerSteps"></app-summary> -->
+  <app-menu [paso]="paso"></app-menu>
+  <app-info-personal
+    [ngClass]="paso === 1 ? 'visible' : ''"
+    class="containerSteps"
+    (cambiarPaso)="cambiarPaso($event)"
+  ></app-info-personal>
+  <app-plan
+    class="containerSteps"
+    [ngClass]="paso === 2 ? 'visible' : ''"
+    ></app-plan>
+    <!-- (cambiarPaso)="paso" -->
+  <app-add-ons
+    class="containerSteps"
+    [ngClass]="paso === 3 ? 'visible' : ''"
+  ></app-add-ons>
+  <app-summary
+    class="containerSteps"
+    [ngClass]="paso === 4 ? 'visible' : ''"
+  ></app-summary>
 </div>

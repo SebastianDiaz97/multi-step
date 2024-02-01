@@ -7,4 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'multi-step-angular';
+
+  paso: number = 1
+
+  cambiarPaso(pasos: number){
+    this.paso = pasos;
+    console.log('cambio');
+  }
+
+  // ngOnInit(){
+  //   switch (this.paso) {
+  //     case value:
+        
+  //       break;
+    
+  //     default:
+  //       break;
+  //   }
+  // }
 }
