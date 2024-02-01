@@ -7,6 +7,7 @@ import { InfoPersonalComponent } from './component/info-personal/info-personal.c
 import { PlanComponent } from './component/plan/plan.component';
 import { AddOnsComponent } from './component/add-ons/add-ons.component';
 import { SummaryComponent } from './component/summary/summary.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { SummaryComponent } from './component/summary/summary.component';
     SummaryComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

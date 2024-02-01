@@ -19,6 +19,12 @@ input::placeholder{
     font-weight: 700;
 }
 
+form input:focus{
+    outline: none !important;
+    border:1px solid var(--Marine_blue);
+    /* box-shadow: 0 0 10px #719ECE; */
+}
+
 
 /* 
 div{
@@ -54,3 +60,10 @@ h1{
     font-size: 23px;
 }
 
+
+
+/* error --Strawberry_red */
+
+.error{
+    border-color: var(--Strawberry_red);
+}
