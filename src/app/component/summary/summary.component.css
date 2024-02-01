@@ -1,0 +1,94 @@
+p {
+  color: var(--Cool_gray);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+}
+
+h3 {
+  margin: 0;
+  margin-bottom: 5px;
+  color: var(--Marine_blue);
+}
+
+.containerStep > p {
+  margin-bottom: 43px;
+}
+
+.finish {
+  background: var(--Alabaster);
+  padding: 25px 23px;
+  border-radius: 10px;
+}
+
+.top div h3 {
+  font-size: 1em;
+}
+.top div p {
+    display: inline-block;
+  border-bottom: 2px solid;
+  cursor: pointer;
+}
+
+
+.others{
+    margin-top: 18px;
+}
+
+.other{
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.price{
+    color: var(--Marine_blue);
+}
+
+.total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 23px;
+}
+
+
+.total h2{
+    color: var(--Purplish_blue);
+    margin:0;
+    
+}
+
+.buttons {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.confirm {
+  cursor: pointer;
+  background-color: var(--Purplish_blue);
+  color: var(--White);
+  width: 123px;
+}
+
+.goBack {
+  background-color: var(--White);
+  color: var(--Cool_gray);
+}
+
+button {
+  border: 0px;
+  cursor: pointer;
+  border-radius: 10px;
+  height: 48px;
+  font-weight: 700;
+}
