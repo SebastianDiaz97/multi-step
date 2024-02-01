@@ -42,3 +42,14 @@ html {
   position: relative;
   height: calc(100% - 16px);
 }
+
+h1, p{
+  margin: 0
+}
+
+h1{
+  color: var(--Marine_blue);
+  margin-bottom: 16px;
+  margin-top: 40px;
+}
+

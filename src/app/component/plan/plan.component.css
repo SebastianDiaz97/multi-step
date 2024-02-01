@@ -102,12 +102,6 @@ button {
     color: var(--Cool_gray);
 }
 
-h1{
-    color: var(--Marine_blue);
-    margin-bottom: 18px;
-    margin-top: 40px;
-}
-
 .containerStep > p{
     color: var(--Cool_gray);
     margin-bottom: 40px;
@@ -142,6 +136,6 @@ h1{
 }
 
 .select{
-    background-color: var(--Alabaster);
-    border-color: var(--Purplish_blue);
+  background-color: var(--Alabaster);
+  border-color: var(--Purplish_blue);
 }
