@@ -1,23 +1,31 @@
 <div class="container">
   <app-menu [paso]="paso"></app-menu>
+
   <app-info-personal
     [ngClass]="paso === 1 ? 'visible' : ''"
     class="containerSteps"
     (cambiarPaso)="cambiarPaso($event)"
   ></app-info-personal>
+
   <app-plan
     class="containerSteps"
     [ngClass]="paso === 2 ? 'visible' : ''"
     (cambiarPaso)="cambiarPaso($event)"
     (planSelected)="planSelected($event)"
   ></app-plan>
-  <!-- (cambiarPaso)="paso" -->
+
   <app-add-ons
     class="containerSteps"
     [ngClass]="paso === 3 ? 'visible' : ''"
+    [mesAno]="mesAno"
+    (cambiarPaso)="cambiarPaso($event)"
+    (adds)="adds($event)"
   ></app-add-ons>
+
   <app-summary
     class="containerSteps"
     [ngClass]="paso === 4 ? 'visible' : ''"
+    [prices] = 'prices'
+    [add] = 'add'
   ></app-summary>
 </div>

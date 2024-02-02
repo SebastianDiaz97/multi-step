@@ -2,7 +2,7 @@
   <h1>Pick add-ons</h1>
   <p>Add-ons help enhance your gaming experience.</p>
   <section class="add-ons">
-    <div class="add-on">
+    <label class="add-on" for="online" (change)="jio($event)">
       <div class="info">
         <input type="checkbox" name="online" id="online" />
         <div>
@@ -10,34 +10,34 @@
           <p>Access to multiplayer games</p>
         </div>
       </div>
-      <p class="price">+1/mo</p>
-    </div>
+      <p class="price">{{ mesAno ? "+$1/mo" : "+$10/yr" }}</p>
+    </label>
 
-    <div class="add-on select">
+    <label class="add-on" for="storage" (change)="jio($event)">
       <div class="info">
-        <input type="checkbox" name="online" id="online" />
+        <input type="checkbox" name="storage" id="storage" />
         <div>
           <h3>Large storage</h3>
           <p>Extra 1TB of cloud save</p>
         </div>
       </div>
-      <p class="price">+2/mo</p>
-    </div>
+      <p class="price">{{ mesAno ? "+$2/mo" : "+$20/yr" }}</p>
+    </label>
 
-    <div class="add-on">
+    <label class="add-on" for="profile" (change)="jio($event)">
       <div class="info">
-        <input type="checkbox" name="online" id="online" />
+        <input type="checkbox" name="profile" id="profile" />
         <div>
           <h3>Customizable profile</h3>
           <p>Custom theme on your profile</p>
         </div>
       </div>
-      <p class="price">+2/mo</p>
-    </div>
+      <p class="price">{{ mesAno ? "+$2/mo" : "+$20/yr" }}</p>
+    </label>
 
     <section class="buttons">
-        <button class="goBack">Go Back</button> <br />
-        <button class="nextStep">Next Step</button>
-      </section>
+      <button class="goBack" (click)="volver()">Go Back</button> <br />
+      <button class="nextStep" (click)="siguiente()">Next Step</button>
+    </section>
   </section>
 </div>

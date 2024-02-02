@@ -10,11 +10,49 @@ export class AppComponent {
 
   paso: number = 1
 
-  cambiarPaso(pasos: number){
+  mesAno = true
+
+  add:any
+
+
+  pricePlan = [{
+    name: 'arcade',
+    price: 9
+  }, {
+    name: 'advanced',
+    price: 12
+  }, {
+    name: 'pro',
+    price: 15
+  }]
+
+  priceAdds = [{
+    name: 'online',
+    price: 1
+  }, {
+    name: 'storage',
+    price: 2
+  }, {
+    name: 'profile',
+    price: 2
+  }]
+
+
+
+
+  cambiarPaso(pasos: number) {
     this.paso = pasos;
   }
 
-  planSelected(info: []){
-    console.log(info);
+  planSelected(info: any[]) {
+    this.mesAno = info[0].month
   }
+  
+  adds(info: any) {
+    this.add = info
+  }
+  
+  prices = [this.pricePlan, this.priceAdds]
+  
+
 }
