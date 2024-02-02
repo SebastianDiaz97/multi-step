@@ -16,10 +16,8 @@ export class InfoPersonalComponent {
   @Output() cambiarPaso = new EventEmitter();
 
   submit(event: Event) {
-    // event.preventDefault()
-    // let validado = this.validarFormualrio()
-    // if(validado){
-    if(true){
+    let validado = this.validarFormualrio()
+    if(validado){
       this.cambiarPaso.emit(2)
     }
   }
@@ -49,7 +47,6 @@ export class InfoPersonalComponent {
       this.vacioPhone = false;
     }
 
-    // console.log(this.vacioName, this.vacioEmail, this.vacioPhone);
 
     if (!this.vacioName && !this.vacioEmail && !this.vacioPhone) {
       return true;
@@ -59,7 +56,6 @@ export class InfoPersonalComponent {
   }
 
   change(value: any) {
-    // console.log(value.target.id);
     switch (value.target.id) {
       case 'phone':
         this.vacioPhone = this.phoneNumber === '' ? true : false;
