@@ -55,9 +55,9 @@ export class PlanComponent {
 
 
   selected(event: any) {
-    // console.log(event.srcElement.id);
+    // console.log(event);
 
-    switch (event.srcElement.id) {
+    switch (event.id) {
       case "arcade":
         if (!this.arcade) {
           this.arcade = !this.arcade;

@@ -6,7 +6,7 @@
     <div
       class="plan"
       id="arcade"
-      (click)="selected($event)"
+      (click)="selected($event.currentTarget)"
       [ngClass]="arcade ? 'selected' : ''"
     >
       <img src="../../../assets/images/icon-arcade.svg" alt="Icon Arcade" />
@@ -17,7 +17,7 @@
     <div
       class="plan"
       id="advanced"
-      (click)="selected($event)"
+      (click)="selected($event.currentTarget)"
       [ngClass]="advanced ? 'selected' : ''"
     >
       <img src="../../../assets/images/icon-advanced.svg" alt="Icon Advanced" />
@@ -28,7 +28,7 @@
     <div
       class="plan"
       id="pro"
-      (click)="selected($event)"
+      (click)="selected($event.currentTarget)"
       [ngClass]="pro ? 'selected' : ''"
     >
       <img src="../../../assets/images/icon-pro.svg" alt="Icon Pro" />
