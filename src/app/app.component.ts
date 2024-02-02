@@ -12,17 +12,9 @@ export class AppComponent {
 
   cambiarPaso(pasos: number){
     this.paso = pasos;
-    console.log('cambio');
   }
 
-  // ngOnInit(){
-  //   switch (this.paso) {
-  //     case value:
-        
-  //       break;
-    
-  //     default:
-  //       break;
-  //   }
-  // }
+  planSelected(info: []){
+    console.log(info);
+  }
 }

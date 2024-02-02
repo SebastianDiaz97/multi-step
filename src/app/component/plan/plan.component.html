@@ -3,34 +3,52 @@
   <p>You have the option of monthly or yearly billing</p>
 
   <section class="plans">
-    <div class="plan select">
+    <div
+      class="plan"
+      id="arcade"
+      (click)="selected($event)"
+      [ngClass]="arcade ? 'selected' : ''"
+    >
       <img src="../../../assets/images/icon-arcade.svg" alt="Icon Arcade" />
       <h3>Arcade</h3>
-      <p class="price">$9/mo</p>
+      <p class="price">{{ priceArcade }}</p>
+      <p class="free" [hidden]="mesAno">2 months free</p>
     </div>
-    <div class="plan">
+    <div
+      class="plan"
+      id="advanced"
+      (click)="selected($event)"
+      [ngClass]="advanced ? 'selected' : ''"
+    >
       <img src="../../../assets/images/icon-advanced.svg" alt="Icon Advanced" />
       <h3>Advanced</h3>
-      <p class="price">$12/mo</p>
+      <p class="price">{{ priceAdvanced }}</p>
+      <p class="free" [hidden]="mesAno">2 months free</p>
     </div>
-    <div class="plan">
+    <div
+      class="plan"
+      id="pro"
+      (click)="selected($event)"
+      [ngClass]="pro ? 'selected' : ''"
+    >
       <img src="../../../assets/images/icon-pro.svg" alt="Icon Pro" />
       <h3>Pro</h3>
-      <p class="price">$15/mo</p>
+      <p class="price">{{ pricePro }}</p>
+      <p class="free" [hidden]="mesAno">2 months free</p>
     </div>
   </section>
 
   <section class="monthYear">
-    <p class="month">Monthly</p>
+    <p [ngClass]="mesAno ? 'tipSelected' : ''">Monthly</p>
     <label class="switch">
-      <input type="checkbox" />
+      <input type="checkbox" (click)="checkbox()" />
       <span class="slider round"></span>
     </label>
-    <p class="year">Yearly</p>
+    <p [ngClass]="!mesAno ? 'tipSelected' : ''">Yearly</p>
   </section>
 
   <section class="buttons">
-    <button class="goBack">Go Back</button> <br />
-    <button class="nextStep">Next Step</button>
+    <button class="goBack" (click)="volver()">Go Back</button> <br />
+    <button class="nextStep" (click)="siguiente()">Next Step</button>
   </section>
 </div>

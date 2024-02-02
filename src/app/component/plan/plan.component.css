@@ -93,13 +93,19 @@ button {
     font-weight: 500;
     background-color: var(--Alabaster);
     border-radius: 10px;
+    color: var(--Cool_gray);
+
 }
 
-.monthYear .month{
+/* .monthYear .month{
     color: var(--Marine_blue);
 }
 .monthYear .year{
     color: var(--Cool_gray);
+} */
+
+.tipSelected{
+  color: var(--Marine_blue);
 }
 
 .containerStep > p{
@@ -115,10 +121,11 @@ button {
 
 .plan{
     width: 138px;
-    height: 160px;
+    /* height: 160px; */
     border: 1px solid var(--Light_gray);
     border-radius: 10px;
     padding: 14px;
+    cursor: pointer;
 }
 
 .plan h3{
@@ -128,14 +135,22 @@ button {
     color: var(--Marine_blue);
 }
 
-.plan p{
+.price{
     margin: 0;
     color: var(--Cool_gray);
     font-size: 14px;
 
 }
 
-.select{
+.selected{
   background-color: var(--Alabaster);
   border-color: var(--Purplish_blue);
 }
+
+.free{
+  font-size: 14px;
+  color: var(--Marine_blue);
+  margin-top: 5px;
+}
+
+

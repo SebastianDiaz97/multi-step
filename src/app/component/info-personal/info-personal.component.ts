@@ -17,8 +17,9 @@ export class InfoPersonalComponent {
 
   submit(event: Event) {
     // event.preventDefault()
-    let validado = this.validarFormualrio()
-    if(validado){
+    // let validado = this.validarFormualrio()
+    // if(validado){
+    if(true){
       this.cambiarPaso.emit(2)
     }
   }
