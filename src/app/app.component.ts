@@ -10,9 +10,11 @@ export class AppComponent {
 
   paso: number = 1
 
-  mesAno = true
+  mesAno:any
 
   add:any
+
+  allInfo:any
 
 
   pricePlan = [{
@@ -45,6 +47,7 @@ export class AppComponent {
   }
 
   planSelected(info: any[]) {
+    this.allInfo = info
     this.mesAno = info[0].month
   }
   

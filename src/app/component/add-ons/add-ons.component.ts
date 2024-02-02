@@ -11,13 +11,12 @@ export class AddOnsComponent {
   @Output() adds = new EventEmitter()
   @Output() cambiarPaso = new EventEmitter()
 
-
+  addsSelected:any
 
   addOnline = false
   addStorage = false
   addProfile = false
 
-  addsSelected = [{ 'online': this.addOnline }, { 'storage': this.addStorage }, { 'profile': this.addProfile }]
 
   jio(event: any) {
     console.log(event.srcElement.id);
@@ -38,12 +37,13 @@ export class AddOnsComponent {
     // document.getElementById()
   }
 
-  siguiente(){
+  siguiente() {
     this.cambiarPaso.emit(4)
+    this.addsSelected = [this.addOnline, this.addStorage, this.addProfile]
     this.adds.emit(this.addsSelected)
   }
 
-  volver(){
+  volver() {
     this.cambiarPaso.emit(2)
   }
 }

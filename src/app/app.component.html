@@ -27,5 +27,9 @@
     [ngClass]="paso === 4 ? 'visible' : ''"
     [prices] = 'prices'
     [add] = 'add'
+    [mesAno] = 'allInfo'
+    [paso]="paso"
+    (cambiarPaso)="cambiarPaso($event)"
+
   ></app-summary>
 </div>

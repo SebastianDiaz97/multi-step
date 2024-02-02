@@ -93,8 +93,9 @@ export class PlanComponent {
   @Output() cambiarPaso = new EventEmitter()
   @Output() planSelected = new EventEmitter()
   siguiente() {
-    let datos = [{ 
-      month:this.mesAno, arcade:this.arcade, advanced:this.advanced, pro:this.pro }]
+    let datos = [{
+      month: this.mesAno, arcade: this.arcade, advanced: this.advanced, pro: this.pro
+    }]
     // console.log(datos);
     this.cambiarPaso.emit(3)
     this.planSelected.emit(datos)
