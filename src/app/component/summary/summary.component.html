@@ -4,31 +4,37 @@
   <div class="finish">
     <div class="top">
       <div>
-        <h3>Arcade (Monthly)</h3>
-        <p class="change">Change</p>
+        <h3>{{plan}} ({{month ? 'Monthly':'Yearly'}})</h3>
+        <p class="change" (click)="volver(2)">Change</p>
       </div>
-      <h3>$9/mo</h3>
+      <h3>${{month ? pricePlanes: pricePlanes*10}}/{{month ? 'mo':'yr'}}</h3>
     </div>
     <hr />
     <div class="others">
-      <div class="other">
+      <div class="other" [ngClass]="selectOnline ? '': 'visible' ">
         <p>Online service</p>
-        <p class="price">+$1/mo</p>
+        <p class="price">/+${{month ? priceAddOnline+'mo': priceAddOnline*10+'yr'}}</p>
+
       </div>
-      <div class="other">
+      <div class="other" [ngClass]="selectStorage ? '': 'visible' ">
         <p>Large storage</p>
-        <p class="price">+$2/mo</p>
+        <p class="price">/+${{month ? priceAddStorage+'mo': priceAddStorage*10+'yr'}}</p>
+
+      </div>
+      <div class="other" [ngClass]="selectProfile ? '': 'visible' ">
+        <p>Customizable profile</p>
+        <p class="price">/+${{month ? priceAddProfile+'mo': priceAddProfile*10+'yr'}}</p>
       </div>
     </div>
   </div>
   <div class="total">
     <p>Total (per month)</p>
-    <h2>+12/mo</h2>
+    <h2>+{{total}}/{{month ? 'mo':'yr'}}</h2>
   </div>
 
 
   <section class="buttons">
-    <button class="goBack">Go Back</button> <br />
-    <button class="confirm">Confirm</button>
+    <button class="goBack" (click)="volver(3)">Go Back</button> <br />
+    <button class="confirm" (click)="recargar()">Confirm</button>
   </section>
 </div>
