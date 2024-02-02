@@ -19,7 +19,6 @@ export class AddOnsComponent {
 
 
   jio(event: any) {
-    console.log(event.srcElement.id);
     switch (event.srcElement.id) {
       case 'online':
         this.addOnline = !this.addOnline
